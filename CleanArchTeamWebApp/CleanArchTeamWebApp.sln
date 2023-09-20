@@ -3,19 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchTeamWebApp", "CleanArchTeamWebApp\CleanArchTeamWebApp.csproj", "{3C0C988E-8F28-44FD-8C2D-E07BCD3F5C80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchTeamWebApp", "CleanArchTeamWebApp\CleanArchTeamWebApp.csproj", "{3C0C988E-8F28-44FD-8C2D-E07BCD3F5C80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{882BBD37-016A-4C0F-9FD5-C40DC357BB5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Layers", "Layers", "{C9049D4A-0D8B-49D0-ABB7-233E0E7A8308}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{7BE71D1C-D7FD-49C3-A25E-D5AFEEBFA25B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{7BE71D1C-D7FD-49C3-A25E-D5AFEEBFA25B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{710F90ED-9DC6-474F-84CC-55D532350BD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{710F90ED-9DC6-474F-84CC-55D532350BD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{315AD4D0-90F1-4015-9748-F6C50934D400}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{315AD4D0-90F1-4015-9748-F6C50934D400}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{29945446-08EB-4809-A5C4-BD661B22C70C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "Presentation\Presentation.csproj", "{29945446-08EB-4809-A5C4-BD661B22C70C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseTeamsWebApp", "DatabaseTeamsWebApp\DatabaseTeamsWebApp.sqlproj", "{0C5F8DE9-FD79-44C4-B2E0-2FD8BA19EF68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,12 @@ Global
 		{29945446-08EB-4809-A5C4-BD661B22C70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29945446-08EB-4809-A5C4-BD661B22C70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29945446-08EB-4809-A5C4-BD661B22C70C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5F8DE9-FD79-44C4-B2E0-2FD8BA19EF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C5F8DE9-FD79-44C4-B2E0-2FD8BA19EF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C5F8DE9-FD79-44C4-B2E0-2FD8BA19EF68}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0C5F8DE9-FD79-44C4-B2E0-2FD8BA19EF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C5F8DE9-FD79-44C4-B2E0-2FD8BA19EF68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C5F8DE9-FD79-44C4-B2E0-2FD8BA19EF68}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +60,7 @@ Global
 		{710F90ED-9DC6-474F-84CC-55D532350BD2} = {C9049D4A-0D8B-49D0-ABB7-233E0E7A8308}
 		{315AD4D0-90F1-4015-9748-F6C50934D400} = {C9049D4A-0D8B-49D0-ABB7-233E0E7A8308}
 		{29945446-08EB-4809-A5C4-BD661B22C70C} = {C9049D4A-0D8B-49D0-ABB7-233E0E7A8308}
+		{0C5F8DE9-FD79-44C4-B2E0-2FD8BA19EF68} = {882BBD37-016A-4C0F-9FD5-C40DC357BB5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F63F5AF-3F32-483B-963B-CF50F1CF7229}
