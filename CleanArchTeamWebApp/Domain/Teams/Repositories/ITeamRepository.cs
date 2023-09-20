@@ -10,6 +10,6 @@ namespace Domain.Teams.Repositories
 {
     public interface ITeamRepository : IRepository<Team>
     {
-
+        Task<IEnumerable<Team>> GetAllAsync();
     }
 }
