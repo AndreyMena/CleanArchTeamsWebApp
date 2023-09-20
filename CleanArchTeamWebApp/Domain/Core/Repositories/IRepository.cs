@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Core.Repositories
 {
-    internal class IRepository
+    public interface IRepository<TAggregateRoot> where TAggregateRoot : AggregateRoot
     {
-        public interface IRepository<TAggregateRoot> where TAggregateRoot : AggregateRoot
-        {
-            IUnitOfWork UnitOfWork { get; }
-        }
-    }
+        IUnitOfWork UnitOfWork { get; }
+    }   
 }
