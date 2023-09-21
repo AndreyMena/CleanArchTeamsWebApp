@@ -22,5 +22,21 @@ namespace Application.Teams.Implementation
         {
             return await _teamRepository.GetAllAsync();
         }
+
+        public async Task<Team?> GetTeamByIdAsync(int id)
+        {
+            return await _teamRepository.GetByIdAsync(id);
+        }
+
+
+        public async Task AddTeamAsync(Team team)
+        {
+            await _teamRepository.AddTeam(team);
+        }
+
+        public async Task DeleteTeamAsync(Team team)
+        {
+            await _teamRepository.DeleteTeam(team);
+        }
     }
 }
