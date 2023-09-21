@@ -1,0 +1,40 @@
+﻿@using Application.Teams.Interfaces;
+@using Domain.Teams.Entities;
+@inject ITeamService teamService;
+
+<h3>Team's list</h3>
+
+<MudSimpleTable Style="overflow-x: auto;">
+    <thead>
+        <tr>
+            @foreach (var h in headings)
+            {
+                <th>@h</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var teams in _teams!)
+        {
+            <tr>
+                <td>@teams.Name </td>
+                <td>@teams.Region</td>
+                <td>@teams.Foundation</td>
+            </tr>
+        }
+    </tbody>
+</MudSimpleTable>
+
+
+@code {
+    string[] headings = { "Team name", "Region", "Foundation"};
+
+    [Parameter]
+    public IEnumerable<Team>? _teams { get; set; }
+
+    protected override void OnInitialized()
+    {
+        if (_teams is null)
+            throw new ArgumentNullException();
+    }
+}

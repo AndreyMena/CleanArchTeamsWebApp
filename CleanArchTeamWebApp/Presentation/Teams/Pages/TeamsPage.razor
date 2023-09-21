@@ -1,0 +1,42 @@
+﻿@page "/Teams"
+@using Domain.Teams.Entities
+@using Application.Teams.Interfaces
+@using Presentation.Core.Components
+@using Presentation.Teams.Components
+
+@inject ITeamService TeamService;
+
+<MudText Align="Align.Center" Typo="Typo.h3">Teams list</MudText>
+<br>
+<div class="container">
+    <Loading IsLoading="_isLoading">
+        @if (!_teams!.Any())
+        {
+            <MudText Class="text-danger" Align="Align.Center" Typo="Typo.h3">There isnt teams</MudText>
+        }
+        else
+        {
+            <TeamsList _teams="_teams" />
+        }
+        <br>
+        
+    </Loading>
+</div>
+<br>
+
+@code {
+    private bool _isLoading = true;
+
+    private IEnumerable<Team>? _teams { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadResearchCenters();
+        _isLoading = false;
+    }
+
+    private async Task LoadResearchCenters()
+    {
+        _teams = await TeamService.GetTeamsAsync();
+    }
+}
