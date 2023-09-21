@@ -25,5 +25,29 @@ namespace Infrastructure.Teams.Repositories
         {
             return await _dbContext.Teams.ToListAsync();
         }
+
+
+        public async Task<Team?> GetByIdAsync(int id)
+        {
+            return await _dbContext.Teams.FindAsync(id);
+        }
+
+        public async Task SaveAsync(Team team)
+        {
+            _dbContext.Update(team);
+            await _dbContext.SaveEntitiesAsync();
+        }
+
+        public async Task AddTeam(Team team)
+        {
+            _dbContext.Add(team);
+            await _dbContext.SaveEntitiesAsync();
+        }
+
+        public async Task DeleteTeam(Team team)
+        {
+            _dbContext.Remove(team);
+            await _dbContext.SaveEntitiesAsync();
+        }
     }
 }

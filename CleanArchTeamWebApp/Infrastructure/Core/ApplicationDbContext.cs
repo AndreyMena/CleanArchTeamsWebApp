@@ -18,5 +18,10 @@ namespace Infrastructure.Core
         {
         }
 
+        public async Task SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
+        {
+            await base.SaveChangesAsync(cancellationToken);
+        }
+
     }
 }

@@ -14,12 +14,13 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var teams in _teams!)
+        @foreach (var team in _teams!)
         {
             <tr>
-                <td>@teams.Name </td>
-                <td>@teams.Region</td>
-                <td>@teams.Foundation</td>
+                <td>@team.Name </td>
+                <td>@team.Region</td>
+                <td>@team.Foundation</td>
+                <td><MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Delete" Color="Color.Error" @onclick="_ => HandleDeleteTeam(team)">Delete</MudButton></td>
             </tr>
         }
     </tbody>
@@ -27,7 +28,7 @@
 
 
 @code {
-    string[] headings = { "Team name", "Region", "Foundation"};
+    string[] headings = { "Team name", "Region", "Foundation", "Delete"};
 
     [Parameter]
     public IEnumerable<Team>? _teams { get; set; }
@@ -36,5 +37,10 @@
     {
         if (_teams is null)
             throw new ArgumentNullException();
+    }
+
+    private async Task HandleDeleteTeam(Team team)
+    {
+        //await OnDelete.InvokeAsync());
     }
 }

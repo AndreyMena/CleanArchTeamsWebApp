@@ -10,5 +10,8 @@ namespace Application.Teams.Interfaces
     public interface ITeamService
     {
         Task<IEnumerable<Team>> GetTeamsAsync();
+        Task<Team?> GetTeamByIdAsync(int id);
+        Task AddTeamAsync(Team team);
+        Task DeleteTeamAsync(Team team);
     }
 }
