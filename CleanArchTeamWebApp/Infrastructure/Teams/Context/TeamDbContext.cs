@@ -20,10 +20,14 @@ namespace Infrastructure.Teams.Context
 
         public DbSet<Team> Teams { get; set; } = null!;
 
+        public DbSet<FootballTeam> FootballTeams { get; set; } = null!;
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new TeamMap());
+            modelBuilder.ApplyConfiguration(new FootbalTeamMap());
+
         }
     }
 }

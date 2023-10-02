@@ -15,5 +15,17 @@ namespace Domain.Teams.Entities
         {
             StadiumName = stadiumName;
         }
+        public string GetStatium()
+        {
+            return StadiumName;
+        }
+        public void SetStatium(string stadiumName)
+        {
+            StadiumName = stadiumName;
+        }
+        public override int GetPlayerSize()
+        {
+            return 11;
+        }
     }
 }

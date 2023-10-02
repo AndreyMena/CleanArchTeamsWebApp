@@ -1,4 +1,5 @@
-﻿using Domain.Teams.Repositories;
+﻿using Domain.Teams.Entities;
+using Domain.Teams.Repositories;
 using Infrastructure.Teams.Context;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,9 @@ namespace Infrastructure.Teams.Repositories
         {
         }
 
-        public Task<IFootballTeamRepository?> GetStadiumName(int id)
+        public string GetStadiumName(int id)
         {
-            throw new NotImplementedException();
+            return _dbContext.FootballTeams.Where(f => f.Id == id).First().StadiumName;
         }
     }
 }

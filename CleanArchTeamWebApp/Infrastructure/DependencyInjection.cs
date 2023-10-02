@@ -19,6 +19,7 @@ namespace Infrastructure
             services.AddDbContext<TeamDbContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+            services.AddScoped<IFootballTeamRepository, FootballTeamRepository>();
 
             return services;
         }

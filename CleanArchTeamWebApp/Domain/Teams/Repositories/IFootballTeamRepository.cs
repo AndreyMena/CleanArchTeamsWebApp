@@ -10,6 +10,6 @@ namespace Domain.Teams.Repositories
 {
     public interface IFootballTeamRepository : IRepository<FootballTeam>, ITeamRepository
     {
-        Task<IFootballTeamRepository?> GetStadiumName(int id);
+        string GetStadiumName(int id);
     }
 }

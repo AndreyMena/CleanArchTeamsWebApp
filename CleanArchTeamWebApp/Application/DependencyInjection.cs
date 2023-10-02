@@ -15,6 +15,7 @@ namespace Application
         public static IServiceCollection AddApplicationLayer(this IServiceCollection services)
         {
             services.AddTransient<ITeamService, TeamService>();
+            services.AddTransient<IFootbalService, FootballService>();
 
             return services;
         }
